@@ -1,11 +1,19 @@
 /* ------ Table of content ------
 
-  1. Components
+  1. Base
+  2. Components
      ++ btn-generate
-  2. Layout
+  3. Layout
      ++ title
      ++ color
 ------------------------------ */
+
+/* ===============
+   Base
+=============== */
+body.changed {
+	transition: background 0.3s ease-out;
+}
 
 /* ===============
    Components
