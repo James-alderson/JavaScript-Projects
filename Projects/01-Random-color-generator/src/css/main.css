@@ -1,0 +1,91 @@
+/* ------ Table of content ------
+
+  1. Components
+     ++ btn-generate
+  2. Layout
+     ++ title
+     ++ color
+------------------------------ */
+
+/* ===============
+   Components
+=============== */
+/* ---- btn-generate ---- */
+.btn-generate {
+	position: relative;
+	padding: 3px;
+	opacity: 0.9;
+	overflow: hidden;
+	border: none;
+	border-radius: 4px;
+	transition: opacity 0.25s ease-out;
+}
+.btn-generate:hover,
+.btn-generate:focus {
+	opacity: 1;
+}
+
+.btn-generate::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	animation: animate_gradient 0.9s linear infinite paused;
+	background: #12bcfe
+		linear-gradient(110deg, #4fcf70, #fad648, #a767e5, #12bcfe, #6dd287)
+		center/50%;
+}
+
+.btn-generate span {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: 2px;
+	background-color: #212529;
+}
+
+@keyframes animate_gradient {
+	0% {
+		background-position: 0;
+	}
+	100% {
+		background-position: 100%;
+	}
+}
+
+/* ===============
+   Layout
+=============== */
+/* ---- title ---- */
+.title a {
+	text-decoration-color: transparent;
+	transition: 0.2s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+/* ---- color ---- */
+.color {
+	position: absolute;
+	top: 108%;
+	left: 5px;
+}
+
+.color li {
+	min-width: 175px;
+	color: #fff;
+	border-bottom: 1px solid #b4bfca;
+	background-color: rgb(33, 37, 41, 0.85);
+}
+.color li:first-of-type {
+	border-radius: 5px 5px 0 0;
+}
+.color li:last-of-type {
+	border-bottom: none;
+	border-radius: 0 0 5px 5px;
+}
