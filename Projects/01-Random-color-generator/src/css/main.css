@@ -6,11 +6,17 @@
   3. Layout
      ++ title
      ++ color
+	4. Reduced_motion
 ------------------------------ */
 
 /* ===============
    Base
 =============== */
+:focus-visible {
+	outline-offset: 2px;
+	outline-color: #0060df;
+}
+
 body.changed {
 	transition: background 0.3s ease-out;
 }
@@ -47,17 +53,15 @@ body.changed {
 		center/50%;
 }
 .btn-generate:hover::before,
-.btn-generate:focus-visible::before {
+.btn-generate:focus::before {
 	animation-play-state: running !important;
 }
 
 .btn-generate span {
 	display: inline-block;
 	position: relative;
-	color: #fff;
 	padding: 0.5rem 1rem;
 	border-radius: 2px;
-	background-color: #212529;
 }
 
 @keyframes animate_gradient {
@@ -75,7 +79,7 @@ body.changed {
 /* ---- title ---- */
 .title a {
 	text-decoration-color: transparent;
-	transition: 0.2s ease-out;
+	transition: text-decoration 0.2s ease-out;
 }
 .title a:hover,
 .title a:focus {
@@ -85,16 +89,26 @@ body.changed {
 /* ---- color ---- */
 .color {
 	position: absolute;
-	top: 108%;
-	left: 5px;
+	top: calc(100% + 12px);
+	animation: fade_in ease 1.3s 1 forwards;
+}
+
+@keyframes fade_in {
+	from {
+		left: -150px;
+		opacity: 0;
+	}
+	to {
+		left: 12px;
+		opacity: 1;
+	}
 }
 
 .color__container {
-	min-width: 240px;
+	min-width: 250px;
 }
 
 .color li {
-	color: #fff;
 	border-bottom: 1px solid #b4bfca;
 	background-color: rgb(33, 37, 41, 0.85);
 }
@@ -104,4 +118,21 @@ body.changed {
 .color li:last-of-type {
 	border-bottom: none;
 	border-radius: 0 0 5px 5px;
+}
+
+/* ===============
+	 Reduced_motion
+=============== */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
 }
