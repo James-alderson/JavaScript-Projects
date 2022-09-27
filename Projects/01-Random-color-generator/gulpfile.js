@@ -48,14 +48,14 @@ function Cachebust_task() {
 
 // CopyCss vendors task
 function copyCss_task() {
-  return src("src/css/vendors/**/*")
-    .pipe(dest("dist/css/vendors"))
+  return src(["src/css/vendors/**/*"], { "base": "src/css" })
+    .pipe(dest("dist/css"))
 }
 
 // CopyJs vendors task
 function copyJs_task() {
-  return src("src/js/vendors/**/*")
-    .pipe(dest("dist/js/vendors"))
+  return src(["src/js/vendors/**/*"], { "base": "src/js" })
+    .pipe(dest("dist/js"))
 }
 
 // CopyImage task
