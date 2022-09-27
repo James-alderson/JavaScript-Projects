@@ -60,8 +60,10 @@ function copyJs_task() {
 
 // CopyImage task
 function copyImage_task() {
-  return src("src/images/favicon/*")
-    .pipe(dest("dist/images/favicon"))
+  return src([
+    "src/images/favicon/*",
+    "src/images/screenshot/*"], { "base": "src/images" })
+    .pipe(dest("dist/images"))
 }
 
 // Initialize browserSync
