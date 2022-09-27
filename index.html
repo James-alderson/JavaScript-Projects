@@ -8,20 +8,42 @@
   <meta name="description" content="Collecting all the javaScript projects that I have designed so far.">
 
   <title>JavaScript Projects</title>
+  <!-- bootstrap v4.6.2 -->
+  <link rel="stylesheet" href="src/css/vendors/bootstrap-4.6.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/main.css">
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="src/images/favicon/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="src/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="src/images/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="manifest" href="src/images/favicon/site.webmanifest">
 </head>
-<body>
+<body class="bg-warning">
   
   <main>
-    <article>
-      <h1>JavaScript Projects</h1>
-      <p>Collecting all the javaScript projects that I have designed so far.</p>
-    </article>
+    <div class="container-xl my-4">
+      <article>
+        <h1>JavaScript Projects</h1>
+        <p class="lead font-weight-normal">Collecting all the javaScript projects that I have designed so far.</p>
+      </article>
+      <!-- Projects -->
+      <div class="row mt-5">
+        <div class="col-12 col-sm-6 col-lg-4 my-3">
+          <div class="card bg-warning border-dark shadow">
+            <img class="card-img-top border-bottom border-secondary"
+              src="Projects/01-Random-color-generator/dist/images/screenshot/Random_Color_Generator.png" alt="Random_Color_Generator project">
+            <div class="card-body">
+              <div class="card-title h5">Random Color Generator</div>
+              <p class="card-text">Random color generator, get random color in 4 color formats by clicking the button.</p>
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <a class="btn btn-primary" href="https://james-alderson.github.io/JavaScript-Projects/Projects/01-Random-color-generator/index.html">Live site</a>
+                <a class="btn btn-secondary" href="https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/01-Random-color-generator">Source code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-
+  
 </body>
 </html>
