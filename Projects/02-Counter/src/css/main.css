@@ -1,0 +1,8 @@
+.title {
+	text-decoration-color: transparent;
+	transition: text-decoration 0.2s ease-out;
+}
+.title:hover,
+.title:focus {
+	text-decoration-color: currentColor;
+}
