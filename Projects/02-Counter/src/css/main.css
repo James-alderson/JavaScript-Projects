@@ -1,8 +1,109 @@
+/* ------ Table of content ------
+
+1. Base
+2. Components
+	 ++ title
+3. Layout
+	 ++ counter
+	 ++ form-container
+4. Breakpoints
+
+------------------------------ */
+
+/* ===============
+	 Base
+=============== */
+body {
+	background: #22262a
+		linear-gradient(
+			-45deg,
+			hsl(210, 11%, 25%),
+			hsl(210, 11%, 20%),
+			hsl(210, 11%, 15%),
+			hsl(210, 11%, 10%)
+		)
+		no-repeat center/cover;
+}
+
+main {
+	display: grid;
+	height: calc(100vh - 59.8333px);
+	place-items: center;
+}
+
+/* ===============
+	 Components
+=============== */
+/* ----- title ----- */
 .title {
+	font-size: 1.45rem;
+}
+
+.title a {
 	text-decoration-color: transparent;
 	transition: text-decoration 0.2s ease-out;
 }
-.title:hover,
-.title:focus {
+.title a:hover,
+.title a:focus {
 	text-decoration-color: currentColor;
+}
+
+.br-gray {
+	border-color: var(--bs-gray-700) !important;
+}
+.br-gray:focus {
+	border-color: var(--bs-gray-600) !important;
+}
+
+/* ===============
+	 Layout
+=============== */
+/* ----- counter ----- */
+.counter-container {
+	position: relative;
+	animation: fade_in ease 1s 1 forwards;
+}
+
+@keyframes fade_in {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.counter {
+	max-width: min(600px, 68vw);
+	min-width: 344px;
+	word-wrap: break-word;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ----- form-container ----- */
+.form-container {
+	max-width: 400px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ===============
+	 Breakpoints
+=============== */
+@media screen and (min-width: 900px) {
+	main {
+		height: calc(100vh - 65.6px);
+	}
+
+	.title {
+		font-size: 1.75rem;
+	}
+
+	.counter {
+		max-width: initial;
+	}
 }

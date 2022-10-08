@@ -11,19 +11,37 @@
   <!-- Bootstrap v5.2.1 -->
   <link rel="stylesheet" href="src/css/vendors/bootstrap-5.2.1/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/counter.js" defer></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" href="src/images/favicon/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="src/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="src/images/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="manifest" href="src/images/favicon/site.webmanifest">
 </head>
-<body>
+<body class="bg-dark text-white">
 
-  <header class="container-fluid bg-light py-3 shadow-sm">
-    <h1 class="fs-3 mb-0">
-      <a class="text-dark title" href="index.html">Counter</a>
+  <header class="container-fluid bg-light shadow-sm py-3">
+    <h1 class="my-0 title">
+      <a class="text-dark" href="index.html">Counter</a>
     </h1>
   </header>
-  
+
+  <main>
+    <!-- Counter -->
+    <div class="container-fluid counter-container text-center">
+      <div id="counter" class="counter display-3 my-4">0</div>
+      <div>
+        <button id="decrease" class="btn btn-sm btn-outline-danger">Decrease</button>
+        <button id="reset" class="btn btn-sm btn-outline-light mx-3">Reset</button>
+        <button id="increase" class="btn btn-sm btn-outline-success">Increase</button>
+      </div>
+      <div class="form-container my-4">
+        <label for="step">Click step</label>
+        <input id="step" class="form-control form-control-sm bg-dark text-white br-gray my-1" type="text" value="1"
+          maxlength="15" placeholder="step">
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>
