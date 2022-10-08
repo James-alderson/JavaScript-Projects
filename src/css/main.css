@@ -1,3 +1,7 @@
+.bg-primary-a {
+	background-color: hsl(53, 93%, 54%) !important;
+}
+
 .shadow {
 	transition: 0.25s ease-out;
 }
