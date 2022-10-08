@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/James-alderson/JavaScript-Projects/issues"
   },
-  "homepage": "https://github.com/James-alderson/JavaScript-Projects#readme",
+  "homepage": "https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/02-Counter#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "browser-sync": "^2.27.10",
