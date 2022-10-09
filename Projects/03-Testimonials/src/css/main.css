@@ -1,0 +1,18 @@
+.title {
+	font-size: 1.45rem;
+}
+
+.title a {
+	text-decoration-color: transparent;
+	transition: text-decoration 0.2s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+@media screen and (min-width: 900px) {
+	.title {
+		font-size: 1.75rem;
+	}
+}
