@@ -1,19 +1,140 @@
+:root {
+	--clr-secondary-a: hsl(52, 100%, 50%);
+}
+
 /* ----- title ----- */
 .title {
 	font-size: 1.45rem;
+	z-index: 99;
 }
 
 .title a {
+	color: var(--bs-dark);
 	text-decoration-color: transparent;
-	transition: text-decoration 0.2s ease-out;
+	transition: text-decoration 0.2s ease-out, color 0.3s ease-out;
 }
 .title a:hover,
 .title a:focus {
 	text-decoration-color: currentColor;
 }
 
+header.menu-open .title > a {
+	color: var(--clr-secondary-a);
+}
+
+/* ----- btn-menu ----- */
+.btn-menu {
+	color: var(--bs-dark) !important;
+	z-index: 99;
+	padding: 12px 10px;
+	transition: border-color 0.35s ease-out;
+}
+.btn-menu:hover,
+.btn-menu:focus,
+.btn-menu:active {
+	border-color: currentColor !important;
+}
+
+header.menu-open .btn-menu {
+	color: var(--clr-secondary-a) !important;
+}
+
+.bar {
+	width: 20px;
+	height: 2px;
+	margin: 5px auto;
+	transition: opacity 0.25s ease-out, transform 0.3s ease-out,
+		background-color 0.35s ease-out;
+	background-color: var(--bs-dark);
+}
+.bar:first-of-type {
+	margin-top: 0;
+}
+.bar:last-of-type {
+	margin-bottom: 0;
+}
+
+header.menu-open .bar {
+	background-color: var(--clr-secondary-a);
+}
+header.menu-open .bar-a {
+	transform: translate(0, 7px) rotate(-45deg);
+}
+header.menu-open .bar-b {
+	opacity: 0;
+}
+header.menu-open .bar-c {
+	transform: translate(0, -7px) rotate(45deg);
+}
+
+/* ----- navigation ----- */
+.navigation {
+	display: flex;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	padding: 3rem;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	transition: clip-path 0.5s ease-out;
+	clip-path: circle(0 at top right);
+	background-color: var(--bs-dark);
+}
+
+header.menu-open .navigation {
+	clip-path: circle(150% at top right);
+}
+
+.navigation a {
+	color: var(--bs-white);
+	font-size: 3.75rem;
+	font-weight: 700;
+	text-decoration-color: transparent;
+	transition: text-decoration 0.2s ease-out, color 0.3s ease-out;
+}
+.navigation a:hover,
+.navigation a:focus {
+	text-decoration-color: currentColor;
+}
+
+header.menu-open .navigation a:hover,
+header.menu-open .navigation a:focus {
+	color: var(--clr-secondary-a);
+}
+
 @media screen and (min-width: 992px) {
 	.title {
 		font-size: 1.75rem;
+	}
+	.title a {
+		color: var(--bs-dark) !important;
+	}
+
+	.btn-menu {
+		display: none;
+	}
+
+	.navigation {
+		position: static;
+		width: initial;
+		height: initial;
+		padding: 0;
+		column-gap: 1.5rem;
+		flex-direction: row;
+    align-items: center;
+		clip-path: none;
+		background-color: transparent;
+	}
+
+	.navigation a {
+		color: var(--bs-dark) !important;
+		font-size: 1rem;
+		font-weight: 400;
 	}
 }

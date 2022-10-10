@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="James Alderson">
   <meta name="description" content="Navbar, Responsive fullscreen navigation menu">
-  
+
   <title>Navbar</title>
   <!-- Bootstrap v5.2.1 -->
   <link rel="stylesheet" href="src/css/vendors/bootstrap-5.2.1/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/main.css">
+  <script src="src/js/navigation.js" defer></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" href="src/images/favicon/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="src/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -19,10 +20,23 @@
 </head>
 <body>
 
-  <header class="container-fluid py-3">
-    <h1 class="my-0 title">
-      <a class="text-dark" href="index.html">Testimonials</a>
+  <header class="container-fluid d-flex justify-content-between align-items-center py-3">
+    <h1 class="title position-relative my-0">
+      <a href="index.html">Navbar</a>
     </h1>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="btn btn-menu position-relative rounded-circle">
+      <div class="bar bar-a"></div>
+      <div class="bar bar-b"></div>
+      <div class="bar bar-c"></div>
+    </button>
   </header>
 
 </body>
