@@ -1,3 +1,22 @@
+/* ------ Table of content ------ 
+
+1. Base
+2. Components
+	 ++ text-secondary-a
+	 ++ btn-arrow
+3. Layout
+	 ++ title
+	 ++ testimonial
+4. Breakpoints
+	 ++ md
+	 ++ lg
+5. Reduced-motion
+
+------------------------------- */
+
+/* ===============
+	 Base
+=============== */
 body {
 	background: #22262a
 		linear-gradient(
@@ -10,23 +29,15 @@ body {
 		no-repeat center/cover fixed;
 }
 
-.title {
-	font-size: 1.45rem;
-}
-
-.title a {
-	text-decoration-color: transparent;
-	transition: text-decoration 0.2s ease-out;
-}
-.title a:hover,
-.title a:focus {
-	text-decoration-color: currentColor;
-}
-
+/* ===============
+	 Components
+=============== */
+/* ----- text-secondary-a ----- */
 .text-secondary-a {
 	color: #8c8c8c !important;
 }
 
+/* ----- btn-arrow ----- */
 .btn-arrow {
 	color: #fff;
 }
@@ -40,6 +51,24 @@ body {
 	border-color: transparent;
 }
 
+/* ===============
+	 Layout
+=============== */
+/* ----- title ----- */
+.title {
+	font-size: 1.45rem;
+}
+
+.title a {
+	text-decoration-color: transparent;
+	transition: text-decoration 0.2s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+/* ----- testimonial ----- */
 .testimonial-container {
 	max-width: 400px;
 	animation: fade_in ease 1s 1 forwards;
@@ -57,10 +86,10 @@ body {
 
 .testimonial {
 	transition: box-shadow 0.25s ease-out, filter 0.5s ease-out;
-	box-shadow: 0 0.2rem 1rem hsla(190, 90%, 50%, 0.15) !important;
+	box-shadow: 0 0.2rem 1rem hsla(190, 90%, 50%, 0.15);
 }
 .testimonial:hover {
-	box-shadow: 0 0.5rem 1rem hsla(190, 90%, 50%, 0.15) !important;
+	box-shadow: 0 0.5rem 1rem hsla(190, 90%, 50%, 0.15);
 }
 
 .testimonial.loading {
@@ -71,7 +100,7 @@ body {
 .testimonial__img-container {
 	position: relative;
 	min-height: 330px;
-	border-bottom: 1px solid rgb(108, 117, 125) !important;
+	border-bottom: 1px solid rgb(108, 117, 125);
 }
 
 .testimonial__img {
@@ -109,6 +138,10 @@ body {
 	text-transform: capitalize;
 }
 
+/* ===============
+	 Breakpoints
+=============== */
+/* ----- md ----- */
 @media screen and (min-width: 768px) {
 	main {
 		display: grid;
@@ -123,8 +156,8 @@ body {
 	.testimonial__img-container {
 		min-width: 340px;
 		max-width: 340px;
-		border-bottom: none !important;
-		border-right: 1px solid rgb(108, 117, 125) !important;
+		border-bottom: none;
+		border-right: 1px solid rgb(108, 117, 125);
 	}
 
 	.testimonial__img {
@@ -140,6 +173,7 @@ body {
 	}
 }
 
+/* ----- lg ----- */
 @media screen and (min-width: 992px) {
 	main {
 		height: calc(100vh - 65.6px);
@@ -158,5 +192,22 @@ body {
 
 	.testimonial__quote {
 		font-size: 1.25rem;
+	}
+}
+
+/* ===============
+	 Reduced-motion
+=============== */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
 	}
 }
