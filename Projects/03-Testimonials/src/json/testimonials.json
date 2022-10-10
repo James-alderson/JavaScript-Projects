@@ -3,70 +3,70 @@
 		"id": 1,
 		"name": "alan williams",
 		"job": "web developer",
-		"img": "src/images/clients/alan-williams.jpg",
+		"img": "dist/images/clients/alan-williams.jpg",
 		"text": "Alia viderer aperiri in vis, te sea aliquip labitur. Sea aperiri volumus tractatos ne, erat contentiones deterruisset eum at, viris habemus assueverit an his. Mel an graeci mandamus indoctum. At nostro voluptaria duo, et quo quis tacimates, sea at erat dolorem pertinax."
 	},
 	{
 		"id": 2,
 		"name": "casey schwartz",
 		"job": "IT technician",
-		"img": "src/images/clients/casey-schwartz.jpg",
+		"img": "dist/images/clients/casey-schwartz.jpg",
 		"text": "Per te nobis oporteat pertinacia, facilisis definitionem ad est. No verear torquatos his, mel viderer delenit ex, euismod consulatu vituperata mel in. Vim ut dicat consul definitiones, mea possit delenit fuisset ut. Ne urbanitas definitiones quo, mea te ludus munere, dictas ornatus qui ea. Has inani constituam no, usu agam ipsum utamur ea."
 	},
 	{
 		"id": 3,
 		"name": "darren ford",
 		"job": "Support specialist",
-		"img": "src/images/clients/darren-ford.jpg",
+		"img": "dist/images/clients/darren-ford.jpg",
 		"text": "Iisque vituperata sea id. Id alii omnium pro. Has mutat impetus corrumpit in. An sea utamur efficiendi, id illud causae cum, atqui inermis in sit. Ius an illud dicant veritus, probo homero impedit sea ex, in vel choro possim. Vix meis liber no, atqui dolore dicunt id his."
 	},
 	{
 		"id": 4,
 		"name": "elvira jennings",
 		"job": "IT security specialist",
-		"img": "src/images/clients/elvira-jennings.jpg",
+		"img": "dist/images/clients/elvira-jennings.jpg",
 		"text": "Lorem harum consulatu te pri, amet facer dissentiunt sed te, cu minim inimicus mediocrem eam. Tibique omittantur eu quo. Mea saepe pertinax instructior in. Ea sit partem diceret tacimates, simul euismod an sea, officiis euripidis cu nam."
 	},
 	{
 		"id": 5,
 		"name": "gerald edwards",
 		"job": "Computer programmer",
-		"img": "src/images/clients/gerald-edwards.jpg",
+		"img": "dist/images/clients/gerald-edwards.jpg",
 		"text": "Solet ponderum patrioque ne eum, vix ei mutat referrentur. Id est porro appareat, albucius ponderum ne nam, quas iracundia argumentum eos eu. Sea at animal volutpat. Ut pri option dissentiet, cum fuisset consetetur definitiones ut."
 	},
 	{
 		"id": 6,
 		"name": "harry briggs",
 		"job": "Systems analyst",
-		"img": "src/images/clients/harry-briggs.jpg",
+		"img": "dist/images/clients/harry-briggs.jpg",
 		"text": "Animal similique ut est, vix dicta soluta minimum et. Ad clita iudicabit suscipiantur mea. Tacimates maiestatis consetetur id vim. Ius dictas laboramus ut, ex suas possit praesent duo, usu in fugit labore."
 	},
 	{
 		"id": 7,
 		"name": "jane aguilar",
 		"job": "Network engineer",
-		"img": "src/images/clients/jane-aguilar.jpg",
+		"img": "dist/images/clients/jane-aguilar.jpg",
 		"text": "Mucius pertinax senserit eu eos. Mei malis nemore gubergren ea, ei iusto soleat probatus est. Omnium comprehensam sit id. Te cum fastidii epicurei deterruisset, his eu quem inermis definitionem. Has omnes insolens maiestatis ea, solet consulatu ea cum, ex nec consequat theophrastus."
 	},
 	{
 		"id": 8,
 		"name": "lan dixon",
 		"job": "Software engineer",
-		"img": "src/images/clients/lan-dixon.jpg",
+		"img": "dist/images/clients/lan-dixon.jpg",
 		"text": "Quidam dolorum tractatos vim ea, ne aperiri mentitum pri. Nec no scripta platonem, sed ei esse erat docendi. In dicat alienum voluptatum nam. Eos te ubique vidisse rationibus, suas fabulas ea has. Ei cum case platonem."
 	},
 	{
 		"id": 9,
 		"name": "myra johnston",
 		"job": "User experience designer",
-		"img": "src/images/clients/myra-johnston.jpg",
+		"img": "dist/images/clients/myra-johnston.jpg",
 		"text": "Posse mollis has ei, est ei hinc omnis. Id ius platonem cotidieque, est purto fabellas voluptatum te. Etiam detraxit an pro, nec ei erat iudico. Qui option graecis adipiscing ne, vel no veniam causae gloriatur. Eos dicam aperiam accusam ad. Te vis ludus ceteros inciderint, viris postea periculis est at."
 	},
 	{
 		"id": 10,
 		"name": "pamela graves",
 		"job": "Database administrator",
-		"img": "src/images/clients/pamela-graves.jpg",
+		"img": "dist/images/clients/pamela-graves.jpg",
 		"text": "Quo id saperet habemus, te officiis prodesset ius. Id nihil invidunt sea. Pri cu veri commodo, habeo nominati usu at, ad vix prima idque reprimique. At ius altera pericula, per eu porro errem scaevola, sit eu viderer labitur insolens. Exerci salutatus sententiae ut nec, maiestatis conclusionemque an nam."
 	}
 ]

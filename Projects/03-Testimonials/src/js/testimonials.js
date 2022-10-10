@@ -21,7 +21,7 @@ function set_counter(event) {
   let statusCode = 0
   response_status(statusCode)
 
-  fetch("src/json/testimonials.json")
+  fetch("dist/json/testimonials.json")
     .then(response => {
       response_status(response.status)
       return response.json()

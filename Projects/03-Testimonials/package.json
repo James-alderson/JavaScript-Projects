@@ -1,0 +1,40 @@
+{
+  "name": "testimonials",
+  "version": "1.0.0",
+  "description": "Testimonials, Customer reviews about our team's work and support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/JavaScript-Projects.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "bootstrap",
+    "npm",
+    "gulp"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/JavaScript-Projects/issues"
+  },
+  "homepage": "https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/03-Testimonials#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.17"
+  }
+}
