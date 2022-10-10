@@ -22,6 +22,7 @@ Collecting all the javaScript projects that I have designed so far.
 |-----|------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | 01. | Random-color-generator | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/01-Random-color-generator) | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/01-Random-color-generator/index.html) |
 | 02. | Counter                | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/02-Counter)                | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/02-Counter/index.html)                |
+| 03. | Testimonials           | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/03-Testimonials)           | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/03-Testimonials/index.html)           |
 
 ## My process
 
