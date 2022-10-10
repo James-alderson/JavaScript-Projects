@@ -42,6 +42,17 @@ body {
 
 .testimonial-container {
 	max-width: 400px;
+	animation: fade_in ease 1s 1 forwards;
+}
+
+@keyframes fade_in {
+	from {
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
 }
 
 .testimonial {
