@@ -79,7 +79,9 @@ function copyCss_task() {
 
 // CopyImg
 function copyImg_task() {
-  return src("src/images/favicon/*", { base: "src/images" })
+  return src([
+    "src/images/favicon/*",
+    "src/images/screenshot/*"], { base: "src/images" })
     .pipe(dest("dist/images"))
 }
 
