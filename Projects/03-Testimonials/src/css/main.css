@@ -124,6 +124,8 @@ body {
 
 	.testimonial__content {
 		min-height: 350px;
+		background: url(../images/main/quotation-mark.png) no-repeat;
+		background-position: calc(100% - 1.5rem) calc(100% - 1rem);
 	}
 }
 
