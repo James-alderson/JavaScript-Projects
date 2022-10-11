@@ -1,7 +1,30 @@
+/* ------ Table of content ------
+
+1. Custom property
+2. Base
+3. Components
+	 ++ btn-menu
+4. Layout
+	 ++ title
+	 ++ navigation
+	 ++ quote
+5. Breakpoints
+	 ++ md
+	 ++ lg
+6. Reduced-motion
+
+------------------------------ */
+
+/* ====================
+	 Custom property
+==================== */
 :root {
 	--clr-primary-a: hsl(52, 100%, 50%);
 }
 
+/* ===============
+	 Base
+=============== */
 body {
 	background-color: var(--clr-primary-a);
 }
@@ -10,11 +33,6 @@ main {
 	display: flex;
 	align-items: center;
 	height: calc(100vh - 74px);
-}
-
-.quote {
-	background: url(../images/main/quotation-mark.png) no-repeat
-		calc(100% - 12px) 100%/60px;
 }
 
 figure {
@@ -26,7 +44,6 @@ blockquote p::after {
 	display: inline-block;
 	color: var(--bs-dark);
 }
-
 blockquote p::before {
 	content: "\201C";
 }
@@ -34,26 +51,9 @@ blockquote p::after {
 	content: "\201D";
 }
 
-/* ----- title ----- */
-.title {
-	font-size: 1.45rem;
-	z-index: 99;
-}
-
-.title a {
-	color: var(--bs-dark);
-	text-decoration-color: transparent;
-	transition: text-decoration 0.2s ease-out, color 0.3s ease-out;
-}
-.title a:hover,
-.title a:focus {
-	text-decoration-color: currentColor;
-}
-
-header.menu-open .title > a {
-	color: var(--clr-primary-a);
-}
-
+/* ===============
+	 Components
+=============== */
 /* ----- btn-menu ----- */
 .btn-menu {
 	color: var(--bs-dark) !important;
@@ -77,7 +77,7 @@ header.menu-open .btn-menu {
 	height: 2px;
 	margin: 5px auto;
 	transition: opacity 0.25s ease-out, transform 0.3s ease-out,
-		background-color 0.35s ease-out;
+		background 0.35s ease-out;
 	background-color: var(--bs-dark);
 }
 .bar:first-of-type {
@@ -98,6 +98,29 @@ header.menu-open .bar-b {
 }
 header.menu-open .bar-c {
 	transform: translate(0, -7px) rotate(45deg);
+}
+
+/* ===============
+	 Layout
+=============== */
+/* ----- title ----- */
+.title {
+	font-size: 1.45rem;
+	z-index: 99;
+}
+
+.title a {
+	color: var(--bs-dark);
+	text-decoration-color: transparent;
+	transition: text-decoration 0.2s ease-out, color 0.3s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+header.menu-open .title > a {
+	color: var(--clr-primary-a);
 }
 
 /* ----- navigation ----- */
@@ -141,19 +164,30 @@ header.menu-open .navigation a:focus {
 	color: var(--clr-primary-a);
 }
 
+/* ----- quote ----- */
+.quote {
+	background: url(../images/main/quotation-mark.png) no-repeat
+		calc(100% - 12px) 100%/60px;
+}
+
+/* ===============
+	 Breakpoints
+=============== */
+/* ----- md ----- */
 @media screen and (min-width: 768px) {
 	.quote {
 		background-size: 75px;
 	}
 }
 
+/* ----- lg ----- */
 @media screen and (min-width: 992px) {
 	main {
 		height: calc(100vh - 65.6px);
 	}
 
-	.quote {
-		background-size: 90px;
+	.btn-menu {
+		display: none;
 	}
 
 	.title {
@@ -161,10 +195,6 @@ header.menu-open .navigation a:focus {
 	}
 	.title a {
 		color: var(--bs-dark) !important;
-	}
-
-	.btn-menu {
-		display: none;
 	}
 
 	.navigation {
@@ -183,5 +213,26 @@ header.menu-open .navigation a:focus {
 		color: var(--bs-dark) !important;
 		font-size: 1rem;
 		font-weight: 400;
+	}
+
+	.quote {
+		background-size: 90px;
+	}
+}
+
+/* ===============
+	 Reduced-motion
+=============== */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
 	}
 }
