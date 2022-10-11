@@ -72,6 +72,7 @@ header.menu-open .btn-menu {
 }
 
 .bar {
+	display: block;
 	width: 20px;
 	height: 2px;
 	margin: 5px auto;
