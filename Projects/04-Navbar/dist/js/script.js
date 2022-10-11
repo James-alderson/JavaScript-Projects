@@ -1,0 +1,1 @@
+const HEADER=document.querySelector("header"),MENU_BUTTON=document.querySelector(".btn-menu");function toggle_class(){HEADER.classList.toggle("menu-open")}MENU_BUTTON.addEventListener("click",toggle_class);
