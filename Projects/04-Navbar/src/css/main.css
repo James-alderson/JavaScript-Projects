@@ -166,8 +166,18 @@ header.menu-open .navigation a:focus {
 
 /* ----- quote ----- */
 .quote {
+	animation: fade_in ease 1s 1 forwards;
 	background: url(../images/main/quotation-mark.png) no-repeat
 		calc(100% - 12px) 100%/60px;
+}
+
+@keyframes fade_in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 /* ===============
