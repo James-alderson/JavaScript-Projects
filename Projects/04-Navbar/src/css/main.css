@@ -1,5 +1,37 @@
 :root {
-	--clr-secondary-a: hsl(52, 100%, 50%);
+	--clr-primary-a: hsl(52, 100%, 50%);
+}
+
+body {
+	background-color: var(--clr-primary-a);
+}
+
+main {
+	display: flex;
+	align-items: center;
+	height: calc(100vh - 74px);
+}
+
+.quote {
+	background: url(../images/main/quotation-mark.png) no-repeat
+		calc(100% - 12px) 100%/60px;
+}
+
+figure {
+	max-width: 850px;
+}
+
+blockquote p::before,
+blockquote p::after {
+	display: inline-block;
+	color: var(--bs-dark);
+}
+
+blockquote p::before {
+	content: "\201C";
+}
+blockquote p::after {
+	content: "\201D";
 }
 
 /* ----- title ----- */
@@ -19,7 +51,7 @@
 }
 
 header.menu-open .title > a {
-	color: var(--clr-secondary-a);
+	color: var(--clr-primary-a);
 }
 
 /* ----- btn-menu ----- */
@@ -36,7 +68,7 @@ header.menu-open .title > a {
 }
 
 header.menu-open .btn-menu {
-	color: var(--clr-secondary-a) !important;
+	color: var(--clr-primary-a) !important;
 }
 
 .bar {
@@ -55,7 +87,7 @@ header.menu-open .btn-menu {
 }
 
 header.menu-open .bar {
-	background-color: var(--clr-secondary-a);
+	background-color: var(--clr-primary-a);
 }
 header.menu-open .bar-a {
 	transform: translate(0, 7px) rotate(-45deg);
@@ -105,10 +137,24 @@ header.menu-open .navigation {
 
 header.menu-open .navigation a:hover,
 header.menu-open .navigation a:focus {
-	color: var(--clr-secondary-a);
+	color: var(--clr-primary-a);
+}
+
+@media screen and (min-width: 768px) {
+	.quote {
+		background-size: 75px;
+	}
 }
 
 @media screen and (min-width: 992px) {
+	main {
+		height: calc(100vh - 65.6px);
+	}
+
+	.quote {
+		background-size: 90px;
+	}
+
 	.title {
 		font-size: 1.75rem;
 	}
@@ -127,7 +173,7 @@ header.menu-open .navigation a:focus {
 		padding: 0;
 		column-gap: 1.5rem;
 		flex-direction: row;
-    align-items: center;
+		align-items: center;
 		clip-path: none;
 		background-color: transparent;
 	}
