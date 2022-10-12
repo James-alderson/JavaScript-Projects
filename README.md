@@ -24,6 +24,7 @@ Collecting all the javaScript projects that I have designed so far.
 | 02. | Counter                | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/02-Counter)                | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/02-Counter/index.html)                |
 | 03. | Testimonials           | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/03-Testimonials)           | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/03-Testimonials/index.html)           |
 | 04. | Navbar                 | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/04-Navbar)                 | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/04-Navbar/index.html)                 |
+| 05. | Slide-navigation       | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/05-Slide-navigation)       | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/05-Slide-navigation/index.html)       |
 
 ## My process
 
