@@ -6,6 +6,10 @@ body {
 	overflow-x: hidden;
 }
 
+main {
+	height: calc(100vh - 72px);
+}
+
 /* ----- close-menu ----- */
 .open-menu .bar {
 	display: block;
@@ -174,6 +178,30 @@ body {
 .black-filter.active {
 	opacity: 1;
 	visibility: visible;
+}
+
+.hero {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
+		url(../images/main/hero-bg.jpg) no-repeat center/cover;
+}
+
+figure {
+	max-width: 850px;
+}
+
+blockquote p::before,
+blockquote p::after {
+	display: inline-block;
+	color: var(--bs-white);
+}
+blockquote p::before {
+	content: "\201C";
+}
+blockquote p::after {
+	content: "\201D";
 }
 
 @media screen and (min-width: 992px) {
