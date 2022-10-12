@@ -11,11 +11,19 @@ main {
 }
 
 /* ----- close-menu ----- */
+.open-menu {
+	display: flex;
+	height: 40px;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .open-menu .bar {
 	display: block;
 	width: 25px;
 	height: 2px;
-	margin: 5px auto;
 	transition: background 0.2s ease-out;
 	background-color: var(--bs-black);
 }
