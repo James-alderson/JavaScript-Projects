@@ -12,6 +12,7 @@ Collecting all the javaScript projects that I have designed so far.
   - [Development dependencies](#development-dependencies)
   - [Installing](#installing)
     - [Edit or development](#edit-or-development)
+      - [Work by Gulp](#work-by-gulp)
 - [Author](#author)
 
 ## Overview
@@ -25,6 +26,7 @@ Collecting all the javaScript projects that I have designed so far.
 | 03. | Testimonials           | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/03-Testimonials)           | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/03-Testimonials/index.html)           |
 | 04. | Navbar                 | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/04-Navbar)                 | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/04-Navbar/index.html)                 |
 | 05. | Slide-navigation       | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/05-Slide-navigation)       | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/05-Slide-navigation/index.html)       |
+| 06. | Modal                  | [Repo](https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/06-Modal)                  | [Site](https://james-alderson.github.io/JavaScript-Projects/Projects/06-Modal/index.html)                  |
 
 ## My process
 
@@ -54,9 +56,14 @@ Collecting all the javaScript projects that I have designed so far.
 
 - Install [Node.js](https://nodejs.org/en/).
 - Run `npm install`.
-- Run `gulp`.
-- Make any changes or development in the 'src' directory, Then run `gulp` to apply the final changes.
-- You can create a localhost by running `gulp bs` to see the changes in momentary.
+
+##### Work by Gulp
+- Enter the `gulp` command to apply the final changes.
+- You can create a localhost by entering `gulp bs` command to see the changes in momentary.
+- Gulp features are used in this project:
+  - Add vendor prefixes and minify css file.
+  - Cache Busting operation.
+  - Create browserSync.
 
 ## Author
 
