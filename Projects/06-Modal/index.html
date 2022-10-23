@@ -9,7 +9,9 @@
 
   <title>Modal</title>
   <!-- Tailwind -->
-  <link rel="stylesheet" href="dist/main.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <!-- Custom -->
+  <script src="src/js/modal.js" defer></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" href="dist/images/favicon/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="dist/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -18,5 +20,51 @@
 </head>
 <body>
 
+  <header class="relative p-4 border-b-2 border-red-500/80 bg-white shadow-lg shadow-red-500/25">
+    <h1 class="title text-2xl font-medium lg:text-3xl">
+      <a class="text-black" href="index.html">Modal</a>
+    </h1>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <div class="hero flex items-center justify-start">
+      <figure class="max-w-2xl px-6 md:max-w-3xl">
+        <blockquote class="text-neutral-200 font-light"
+          cite="https://www.goodreads.com/author/quotes/2898360.Darren_Hardy?page=2">
+          <p class="text-2xl md:text-3xl lg:text-4xl">When you define your goals, you give your brain something new to
+            look for and focus on. It’s as if you’re giving your mind a new set of eyes from which to see all the
+            people, circumstances, conversations, resources, ideas, and creativity surrounding you.</p>
+        </blockquote>
+        <figcaption class="flex mt-6 flex-wrap items-center justify-between">
+          <div>
+            <span class="text-red-400 text-lg md:text-xl">— Darren Hardy</span><br>
+            <cite class="text-neutral-400 text-lg md:text-xl">The Compound Effect</cite>
+          </div>
+          <button 
+            id="openModal"
+            class="inline-block py-2 px-4 rounded transition-colors bg-red-500 hover:bg-red-600 focus:bg-red-600">
+            About author
+          </button>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <!-- Dark Shadow -->
+  <div id="darkShadow" class="fixed inset-0 z-10 transition-colors"></div>
+  <!-- Modal -->
+  <div id="modal" class="fixed top-1/2 left-1/2 w-full max-w-md z-20 rounded-md bg-white shadow-md shadow-red-500/25 md:max-w-lg">
+    <div class="flex text-2xl py-4 px-6 justify-between border-b">
+      <div class="font-medium">Darren Hardy</div>
+      <button id="closeModal" class="transition-colors hover:text-red-500 focus:text-red-500">&#10005;</button>
+    </div>
+    <div class="text-neutral-500 p-6">Darren Hardy is an American author, keynote speaker, advisor, and former publisher
+      of SUCCESS magazine. Hardy is a New York Times best-selling author, who wrote The Entrepreneur Roller Coaster,
+      Living Your Best Year Ever and The Compound Effect. 
+      <a class="text-red-500 underline hover:no-underline focus:no-underline"
+        href="https://en.wikipedia.org/wiki/Darren_Hardy" target="_blank">More</a>
+    </div>
+  </div>
 </body>
 </html>
