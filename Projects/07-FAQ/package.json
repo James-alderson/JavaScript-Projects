@@ -1,0 +1,31 @@
+{
+  "name": "faq",
+  "version": "1.0.0",
+  "description": "FAQ, Responsive and animated accordion menu.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/css/main.css --minify",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./dist/css/main.css --minify --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/JavaScript-Projects.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "tailwind",
+    "npm",
+    "gulp"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/JavaScript-Projects/issues"
+  },
+  "homepage": "https://github.com/James-alderson/JavaScript-Projects/tree/main/Projects/07-FAQ#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
