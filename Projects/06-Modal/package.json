@@ -1,0 +1,31 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "description": "Modal, Responsive and animated dialog box.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/css/main.css --minify",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./dist/css/main.css --watch --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-alderson/JavaScript-Projects.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "tailwind",
+    "npm",
+    "gulp"
+  ],
+  "author": "James Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/James-alderson/JavaScript-Projects/issues"
+  },
+  "homepage": "https://github.com/James-alderson/JavaScript-Projects#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
