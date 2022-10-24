@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ------ Table of content ------
+
+1. Base
+2. Layout
+	 ++ title
+	 ++ hero
+	 ++ accordion
+3. Breakpoints
+	 ++ lg
+
+------------------------------ */
+/* ===============
+	 Base
+=============== */
+body {
+	background: #22262a;
+	background: #22262a
+		linear-gradient(-45deg, #394046, #2e3338, #22262a, #171a1c) no-repeat
+		50% / cover;
+	background-attachment: fixed;
+}
+
+/* ===============
+	 Layout
+=============== */
+/* ----- title ----- */
+.title a {
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: text-decoration 0.25s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+/* ----- hero ----- */
+.hero {
+	height: calc(100vh - 66px);
+}
+
+/* ----- accordion ----- */
+.accordion__content {
+	max-height: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: hidden;
+	transition: visibility 0.2s ease-out, opacity 0.2s ease-out,
+		border-color 0.2s ease-out, max-height 0.4s ease-out;
+	transition-delay: 0.3s;
+}
+.accordion__item:last-of-type .accordion__content {
+	border-bottom: 1px solid transparent;
+}
+
+.accordion__title {
+	transition: border-radius 0.2s ease-out, border-color 0.2s ease-out,
+		box-shadow 0.25s ease-out;
+	transition-delay: 0.3s;
+}
+.accordion__item:last-of-type .accordion__title {
+	border-bottom: 1px solid transparent;
+}
+
+.x-mark {
+	transform: rotate(-45deg);
+	transition: transform 0.3s ease-out 3s;
+}
+
+.accordion__item.show .accordion__title {
+	background-color: hsl(0, 0%, 15%);
+	box-shadow: 0 4px 6px -1px rgb(56 189 248 / 0.2),
+		0 2px 4px -2px rgb(56 189 248 / 0.2);
+	transition: border-radius 0.2s ease-out, border-color 0.2s ease-out,
+		box-shadow 0.25s ease-out;
+}
+.accordion__item.show:last-of-type .accordion__title {
+	border-radius: 0;
+	border-color: #737373;
+}
+
+.accordion__item.show .x-mark {
+	transform: rotate(0);
+	transition: transform 0.3s ease-out;
+}
+
+.accordion__item.show .accordion__content {
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 0.2s ease-out, opacity 0.2s ease-out,
+		border-color 0.2s ease-out, max-height 0.4s ease-out;
+}
+.accordion__item.show:last-of-type .accordion__content {
+	border-color: #737373;
+}
+
+/* ===============
+	 Breakpoints
+=============== */
+/* ----- lg ----- */
+@media screen and (min-width: 992px) {
+	.hero {
+		height: calc(100vh - 70px);
+	}
+}

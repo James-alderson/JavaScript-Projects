@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="James Alderson">
   <meta name="description" content="FAQ, Responsive and animated accordion menu.">
-  
+
   <title>FAQ</title>
   <!-- Tailwind -->
   <link rel="stylesheet" href="dist/css/main.css">
+  <!-- Custom -->
+  <script src="src/js/accordion.js" defer></script>
   <!-- Favicon -->
   <link rel="apple-touch-icon" href="dist/images/favicon/apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="dist/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -17,6 +19,84 @@
   <link rel="manifest" href="dist/images/favicon/site.webmanifest">
 </head>
 <body>
-  
+
+  <header class="relative p-4 border-b-2 border-sky-500/80 bg-white shadow-lg shadow-sky-500/25">
+    <h1 class="title text-2xl font-medium lg:text-3xl">
+      <a class="text-black" href="index.html">FAQ</a>
+    </h1>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <div class="hero grid place-items-center">
+      <div class="accordion max-w-xl md:max-w-2xl">
+        <div class="accordion__item show">
+          <button
+            class="accordion__title flex w-full text-neutral-300 font-medium p-4 items-center justify-between cursor-pointer rounded-t-lg border-b border-neutral-500 bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 md:text-lg">
+            <div>HyperText Markup Language</div>
+            <div class="x-mark">&#10005;</div>
+          </button>
+          <div class="accordion__content text-neutral-200 border-x border-neutral-500 bg-neutral-800/50" tabindex="-1">
+            <p class="text-sm p-4 sm:text-base">The HyperText Markup Language or HTML is the standard markup language
+              for documents designed to be displayed in a web browser. It can be assisted by technologies such as
+              Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+              <a class="text-sky-400 underline hover:no-underline focus:no-underline"
+                href="https://en.wikipedia.org/wiki/HTML" target="_blank">more</a>
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button
+            class="accordion__title flex w-full text-neutral-300 font-medium p-4 items-center justify-between cursor-pointer border-b border-neutral-500 bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 md:text-lg">
+            <div>Cascading Style Sheets</div>
+            <div class="x-mark">&#10005;</div>
+          </button>
+          <div class="accordion__content text-neutral-200 border-x border-neutral-500 bg-neutral-800/50" tabindex="-1">
+            <p class="text-sm p-4 sm:text-base">Cascading Style Sheets (CSS) is a style sheet language used for
+              describing the presentation of a document written in a markup language such as HTML or XML (including XML
+              dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside
+              HTML and JavaScript.
+              <a class="text-sky-400 underline hover:no-underline focus:no-underline"
+                href="https://en.wikipedia.org/wiki/CSS" target="_blank">more</a>
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button
+            class="accordion__title flex w-full text-neutral-300 font-medium p-4 items-center justify-between cursor-pointer border-b border-neutral-500 bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 md:text-lg">
+            <div>JavaScript</div>
+            <div class="x-mark">&#10005;</div>
+          </button>
+          <div class="accordion__content text-neutral-200 border-x border-neutral-500 bg-neutral-800/50" tabindex="-1">
+            <p class="text-sm p-4 sm:text-base">JavaScript, often abbreviated as JS, is a programming language that is
+              one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites
+              use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All
+              major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+              <a class="text-sky-400 underline hover:no-underline focus:no-underline"
+                href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">more</a>
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <button
+            class="accordion__title flex w-full text-neutral-300 font-medium p-4 rounded-b-lg items-center justify-between cursor-pointer bg-neutral-900 hover:bg-neutral-800 focus:bg-neutral-800 md:text-lg">
+            <div>Tailwind CSS</div>
+            <div class="x-mark">&#10005;</div>
+          </button>
+          <div class="accordion__content text-neutral-200 rounded-b-lg border-x border-neutral-500 bg-neutral-800/50"
+            tabindex="-1">
+            <p class="text-sm p-4 sm:text-base">Tailwind CSS is an open source CSS framework. The main feature of this
+              library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined
+              classes for elements such as buttons or tables. Instead, it creates a list of "utility" CSS classes that
+              can be used to style each element by mixing and matching.
+              <a class="text-sky-400 underline hover:no-underline focus:no-underline"
+                href="https://en.wikipedia.org/wiki/Tailwind_CSS" target="_blank">more</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>
