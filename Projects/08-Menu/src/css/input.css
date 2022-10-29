@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ------ Table of content ------
+
+1. Base
+2. Layout
+	 ++ title
+	 ++ card__img
+	 ++ category__button
+3. Breakpoints
+	 ++ md
+	 ++ xl
+
+------------------------------ */
+/* ===============
+	 Base
+=============== */
+body {
+	background: #22262a;
+	background: #22262a
+		linear-gradient(-45deg, #394046, #2e3338, #22262a, #171a1c) no-repeat
+		50% / cover;
+	background-attachment: fixed;
+}
+
+/* ===============
+	 Layout
+=============== */
+/* ----- title ----- */
+.title a {
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	transition: text-decoration 0.25s ease-out;
+}
+.title a:hover,
+.title a:focus {
+	text-decoration-color: currentColor;
+}
+
+/* ----- card__img ----- */
+.card__img {
+	min-height: 250px;
+	max-height: 250px;
+}
+
+/* ----- category__button ----- */
+.category__button.active {
+	border-color: #b91c1c;
+	background-color: #ef4444;
+}
+
+/* ===============
+	 Breakpoints
+=============== */
+/* ----- md ----- */
+@media screen and (min-width: 48rem) {
+	.card__img {
+		min-width: 300px;
+		max-width: 300px;
+	}
+}
+
+/* ----- xl ----- */
+@media screen and (min-width: 75rem) {
+	.card__img {
+		min-width: 250px;
+		max-width: 250px;
+	}
+}
