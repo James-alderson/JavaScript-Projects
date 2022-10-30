@@ -61,7 +61,7 @@ function display_items(menuItems) {
   let menuItem = menuItems.map(item => {
     return `
       <div class="rounded-lg shadow-md shadow-red-600/25 md:flex">
-        <img class="card__img w-full mx-auto object-cover rounded-t-lg border-2 border-red-500 md:rounded-none md:rounded-l-lg" alt="${item.title}" src="${item.img}">
+        <img class="card__img w-full mx-auto object-cover rounded-t-lg border-2 border-red-500 md:rounded-none md:rounded-l-lg" alt="${item.title}" src="${item.src}" data-src="${item.data_src}">
         <div class="p-4 rounded-b-lg border-2 border-t-0 border-neutral-300 md:rounded-none md:rounded-r-lg md:border-t-2 md:border-l-0">
           <div class="flex font-semibold pb-2 border-b border-dotted items-center justify-between">
             <div class="capitalize tracking-widest">${item.title}</div>
@@ -79,4 +79,28 @@ function display_items(menuItems) {
   setTimeout(() => {
     LOADING_DATA.remove()
   }, 500)
+
+  // Lazy loading images
+  let lazyImages = document.querySelectorAll("[data-src]")
+  let options = {
+    threshold: 0,
+    rootMargin: "0px 0px 100px 0px"
+  }
+
+  let imgObserver = new IntersectionObserver(imageObserver, options)
+
+  function imageObserver(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return
+
+      let lazyImage = entry.target
+      lazyImage.src = lazyImage.dataset.src
+
+      observer.unobserve(lazyImage)
+    })
+  }
+
+  lazyImages.forEach(lazyImage => {
+    imgObserver.observe(lazyImage)
+  })
 }
