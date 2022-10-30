@@ -1,5 +1,7 @@
 const MENU_GRID = document.querySelector(".menu__grid")
 const MENU_CATEGORY = document.querySelector(".menu__category")
+const LOADING_DATA = document.querySelector("#loadingData")
+
 let getData =
   fetch("./dist/json/data.json")
     .then(res => res.json())
@@ -7,28 +9,9 @@ let getData =
 
 window.addEventListener("load", async () => {
   await getData
-  display_items(getData)
   display_categorys()
+  display_items(getData)
 })
-
-// Set data value
-function display_items(menuItems) {
-  let menuItem = menuItems.map(item => {
-    return `
-      <div class="rounded-lg shadow-md shadow-red-600/25 md:flex">
-        <img class="card__img w-full mx-auto object-cover rounded-t-lg border-2 border-red-500 md:rounded-none md:rounded-l-lg" alt="${item.title}" src="${item.img}">
-        <div class="p-4 rounded-b-lg border-2 border-t-0 border-neutral-300 md:rounded-none md:rounded-r-lg md:border-t-2 md:border-l-0">
-          <div class="flex font-semibold pb-2 border-b border-dotted items-center justify-between">
-            <div class="capitalize tracking-widest">${item.title}</div>
-            <div class="italic text-red-400">$${item.price}</div>
-          </div>
-          <p class="text-neutral-300 my-2">${item.desc}</p>
-        </div>
-      </div>`
-  }).join("")
-
-  MENU_GRID.innerHTML = menuItem
-}
 
 // Create button Dynamically
 function display_categorys() {
@@ -71,4 +54,29 @@ function display_categorys() {
       else display_items(menuCategory)
     })
   })
+}
+
+// Set data value
+function display_items(menuItems) {
+  let menuItem = menuItems.map(item => {
+    return `
+      <div class="rounded-lg shadow-md shadow-red-600/25 md:flex">
+        <img class="card__img w-full mx-auto object-cover rounded-t-lg border-2 border-red-500 md:rounded-none md:rounded-l-lg" alt="${item.title}" src="${item.img}">
+        <div class="p-4 rounded-b-lg border-2 border-t-0 border-neutral-300 md:rounded-none md:rounded-r-lg md:border-t-2 md:border-l-0">
+          <div class="flex font-semibold pb-2 border-b border-dotted items-center justify-between">
+            <div class="capitalize tracking-widest">${item.title}</div>
+            <div class="italic text-red-400">$${item.price}</div>
+          </div>
+          <p class="text-neutral-300 my-2">${item.desc}</p>
+        </div>
+      </div>`
+  }).join("")
+
+  MENU_GRID.innerHTML = menuItem
+
+  // Ajax loading
+  LOADING_DATA.classList.add("hidden")
+  setTimeout(() => {
+    LOADING_DATA.remove()
+  }, 500)
 }

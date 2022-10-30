@@ -6,6 +6,7 @@
 
 1. Base
 2. Layout
+	 ++ loadingData
 	 ++ title
 	 ++ card__img
 	 ++ category__button
@@ -28,6 +29,16 @@ body {
 /* ===============
 	 Layout
 =============== */
+/* ----- loadingData ----- */
+#loadingData img {
+	width: 30px;
+	height: 30px;
+}
+#loadingData.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
 /* ----- title ----- */
 .title a {
 	text-decoration: underline;
