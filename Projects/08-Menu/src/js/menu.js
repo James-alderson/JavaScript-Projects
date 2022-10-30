@@ -25,7 +25,7 @@ function display_categorys() {
 
   // Set data value
   let categoryBtn = categorys.map(category => {
-    return `<button class="category__button inline-block text-neutral-100 capitalize py-1 px-4 rounded border border-red-500 transition-colors hover:bg-red-500 hover:border-red-700 focus:bg-red-500 focus:border-red-700" data-id="${category}">${category}</button>`
+    return `<button class="category__button inline-block text-neutral-100 capitalize py-1 px-4 rounded border border-red-500 transition-colors hover:text-neutral-900 hover:bg-red-500 hover:border-red-700 focus:text-neutral-900 focus:bg-red-500 focus:border-red-700" data-id="${category}">${category}</button>`
   }).join("")
 
   MENU_CATEGORY.innerHTML = categoryBtn

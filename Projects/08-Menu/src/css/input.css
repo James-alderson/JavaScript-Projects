@@ -58,6 +58,7 @@ body {
 
 /* ----- category__button ----- */
 .category__button.active {
+	color: #171717;
 	border-color: #b91c1c;
 	background-color: #ef4444;
 }
